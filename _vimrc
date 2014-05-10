@@ -516,7 +516,7 @@ nmap <leader>ql :ccl<cr>
 "==========================================
 
 " python 文件的一般设置，比如不要 tab 等
-autocmd filetype python set tabstop=4 shiftwidth=4 expandtab ai
+"autocmd filetype python set tabstop=4 shiftwidth=4 expandtab ai
 
 "" for error highlight，防止错误整行标红导致看不清
 highlight clear spellbad
@@ -527,3 +527,6 @@ highlight clear spellrare
 highlight spellrare term=underline cterm=underline
 highlight clear spelllocal
 highlight spelllocal term=underline cterm=underline
+augroup filetype
+    autocmd! BufRead,BufNewFile BUILD set filetype=blade
+augroup end
