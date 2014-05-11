@@ -57,6 +57,8 @@ Plugin 'SirVer/ultisnips'
 
 Plugin 'honza/vim-snippets'
 
+Plugin 'vim-scripts/a.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -87,6 +89,12 @@ let g:mapleader = ","
 
 " clang-complete
 set completeopt-=preview
+let g:clang_complete_copen=1
+let g:clang_periodic_quickfix=1
+let g:clang_snippets=1
+let g:clang_close_preview=1
+let g:clang_use_library=1
+let g:clang_user_options='-stdlib=libc++ -std=c++11 -IIncludePath'
 
 " molokai
 " let g:molokai_original = 1
@@ -112,9 +120,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " 显示所有头文件， :Gtags -P /vm/ 显示vm目录下的文件。
 nmap <c-i> :Gtags <C-R>=expand("<cword>")<CR><CR>
 nmap <c-t> :Gtags -r <C-R>=expand("<cword>")<CR><CR>
-nmap <c-m> :Gtags -s <C-R>=expand("<cword>")<CR><CR>
+nmap <c-o> :Gtags -s <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>gr :!grep -r <C-R>=expand("<cword>")<CR> * <CR>
 nmap <c-u> :ccl <CR>
-nmap <c-o> :Gtags -f %
+"nmap <c-o> :Gtags -f %
 function! UpdateGtags(f)
     let dir = fnamemodify(a:f, ':p:h')
     exe 'silent !cd ' . dir . ' && global -u &> /dev/null &'
@@ -247,6 +256,8 @@ set ruler
 set showcmd
 " 左下角显示当前vim模式
 set showmode
+
+set cc=80
 
 " 在上下移动光标时，光标的上方或下方至少会保留显示的行数
 "set scrolloff=7
