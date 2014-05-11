@@ -97,7 +97,7 @@ let g:clang_periodic_quickfix=1
 let g:clang_snippets=1
 let g:clang_close_preview=1
 "let g:clang_use_library=1
-let g:clang_user_options='-I/usr/include -I/usr/local/include -I/usr/include/c++/4.8.2 -I/usr/include/x86_64-linux-gnu -I. -I.. -I../..'
+let g:clang_user_options='-I/usr/include -I/usr/local/include -I/usr/include/c++/4.8.2 -I/usr/include/x86_64-linux-gnu -I. -I.. -I../.. -I../../..'
 ""-stdlib=libc++ -std=c++11 
 
 " molokai
