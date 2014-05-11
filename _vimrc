@@ -97,7 +97,7 @@ let g:clang_periodic_quickfix=1
 let g:clang_snippets=1
 let g:clang_close_preview=1
 "let g:clang_use_library=1
-let g:clang_user_options='-I/usr/include -I/usr/local/include -I/usr/include/c++/4.8.2 -I/usr/include/x86_64-linux-gnu -I. -I.. -I../.. -I../../..'
+let g:clang_user_options='-I/usr/include -I/usr/local/include -I/usr/include/c++/4.8.2 -I/usr/include/x86_64-linux-gnu -I/usr/include/x86_64-linux-gnu/c++/4.8 -I. -I.. -I../.. -I../../..'
 ""-stdlib=libc++ -std=c++11 
 
 " molokai
@@ -312,9 +312,9 @@ set autoindent    " 打开自动缩进
 " never add copyindent, case error   " copy the previous indentation on autoindenting
 
 " tab相关变更
-set tabstop=4     " 设置tab键的宽度        [等同的空格个数]
-set shiftwidth=4  " 每一次缩进对应的空格数
-set softtabstop=4 " 按退格键时可以一次删掉 4 个空格
+set tabstop=2     " 设置tab键的宽度        [等同的空格个数]
+set shiftwidth=2  " 每一次缩进对应的空格数
+set softtabstop=2 " 按退格键时可以一次删掉 4 个空格
 set smarttab      " insert tabs on the start of a line according to shiftwidth, not tabstop 按退格键时可以一次删掉 4 个空格
 set expandtab     " 将tab自动转化成空格    [需要输入真正的tab键时，使用 ctrl+v + tab]
 set shiftround    " 缩进时，取整 use multiple of shiftwidth when indenting with '<' and '>'
