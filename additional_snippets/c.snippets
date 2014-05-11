@@ -1,0 +1,36 @@
+###########################################################################
+#                            TextMate Snippets                            #
+###########################################################################
+
+priority -50
+
+snippet genh "autogen header"
+// Copyright 2014 Wandoujia Inc. All Rights Reserved.
+// Author: liyinn@wandoujia.com
+
+#ifndef ${1:`!p
+if not snip.c:
+	import random, string
+	name = snip.basename or "name"
+	rand = ''
+	snip.rv = ('%s_%s' % (name,rand)).upper()
+else:
+	snip.rv = snip.c`}
+#define $1
+
+${0}
+
+#endif  // $1
+
+endsnippet
+
+snippet genc "autogen c"
+// Copyright 2014 Wandoujia Inc. All Rights Reserved.
+// Author: liyinn@wandoujia.com
+
+${0}
+
+endsnippet
+
+
+# vim:ft=snippets:

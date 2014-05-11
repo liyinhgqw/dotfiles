@@ -92,10 +92,10 @@ let g:mapleader = ","
 
 " clang-complete
 set completeopt-=preview
-let g:clang_complete_copen=1
-let g:clang_periodic_quickfix=1
-let g:clang_snippets=1
-let g:clang_close_preview=1
+"let g:clang_complete_copen=1
+"let g:clang_periodic_quickfix=1
+"let g:clang_snippets=1
+"let g:clang_close_preview=1
 "let g:clang_use_library=1
 let g:clang_user_options='-I/usr/include -I/usr/local/include -I/usr/include/c++/4.8.2 -I/usr/include/x86_64-linux-gnu -I/usr/include/x86_64-linux-gnu/c++/4.8 -I. -I.. -I../.. -I../../..'
 ""-stdlib=libc++ -std=c++11 
